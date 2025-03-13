@@ -2,7 +2,48 @@ import { INavData } from '@coreui/angular';
 
 export const navItems: INavData[] = [
   {
-    name: 'Dashboard',
+    name: 'home',
+    url: '/home',
+    iconComponent: { name: 'cil-speedometer' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    }
+  },
+  {
+    name: 'empresas',
+    url: '/empresas',
+    iconComponent: { name: 'cil-speedometer' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    },
+    children: [
+      {
+        name: 'lista de empresas',
+        url: '/empresas/list-enterprises',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'agregar',
+        url: '/empresas/agregar',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'editar',
+        url: '/empresas/editar',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'eliminar',
+        url: '/empresas/eliminar',
+        icon: 'nav-icon-bullet'
+      },
+      
+    ]
+  },
+  {
+    name: 'dashboard',
     url: '/dashboard',
     iconComponent: { name: 'cil-speedometer' },
     badge: {
