@@ -39,7 +39,11 @@ export const navItems: INavData[] = [
         url: '/empresas/eliminar',
         icon: 'nav-icon-bullet'
       },
-      
+      {
+        name: 'actualizar',
+        url: '/empresas/actualizar',
+        icon: 'nav-icon-bullet'
+      },
     ]
   },
   {
