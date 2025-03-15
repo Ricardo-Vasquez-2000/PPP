@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'empresas'
+      title: 'Empresas'
     },
     children: [
       {
@@ -16,10 +16,23 @@ export const routes: Routes = [
         path: 'list-enterprises',
         loadComponent: () => import('./list-enterprises/list-enterprises.component').then(m => m.ListEnterprisesComponent),
         data: {
-          title: 'lista de empresas'
+          title: 'Lista de Empresas'
         }
       },
-      
+      {
+        path: 'add-company',
+        loadComponent: () => import('./add-company/add-company.component').then(m => m.AddCompanyComponent),
+        data: {
+          title: 'Agregar Empresa'
+        }
+      },
+      {
+        path: 'edit-company',
+        loadComponent: () => import('./edit-company/edit-company.component').then(m => m.EditCompanyComponent),
+        data: {
+          title: 'Editar Empresa'
+        }
+      },
        
     ]
   }

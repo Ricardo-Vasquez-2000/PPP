@@ -11,7 +11,7 @@ export const navItems: INavData[] = [
     }
   },
   {
-    name: 'empresas',
+    name: 'Empresas',
     url: '/empresas',
     iconComponent: { name: 'cil-speedometer' },
     badge: {
@@ -20,18 +20,18 @@ export const navItems: INavData[] = [
     },
     children: [
       {
-        name: 'lista de empresas',
+        name: 'Lista de Empresas',
         url: '/empresas/list-enterprises',
         icon: 'nav-icon-bullet'
       },
       {
-        name: 'agregar',
-        url: '/empresas/agregar',
+        name: 'Agregar Empresa',
+        url: '/empresas/add-company',
         icon: 'nav-icon-bullet'
       },
       {
-        name: 'editar',
-        url: '/empresas/editar',
+        name: 'Editar Empresa',
+        url: '/empresas/edit-company',
         icon: 'nav-icon-bullet'
       },
       {
