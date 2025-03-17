@@ -34,11 +34,115 @@ export const navItems: INavData[] = [
         url: '/empresas/edit-company',
         icon: 'nav-icon-bullet'
       },
+      
+    ]
+  },
+  {
+    name: 'Sucursales',
+    url: '/sucursales',
+    iconComponent: { name: 'cil-speedometer' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    },
+    children: [
       {
-        name: 'eliminar',
-        url: '/empresas/eliminar',
+        name: 'Lista de Sucursales',
+        url: '/sucursales/list-branches',
         icon: 'nav-icon-bullet'
       },
+      {
+        name: 'Agregar Sucursales',
+        url: '/sucursales/add-branches',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Editar Sucursal',
+        url: '/sucursales/edit-branches',
+        icon: 'nav-icon-bullet'
+      },
+      
+    ]
+  },
+  {
+    name: 'Sistemas',
+    url: '/sistemas',
+    iconComponent: { name: 'cil-speedometer' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    },
+    children: [
+      {
+        name: 'Lista de Sistemas',
+        url: '/sistemas/list-systems',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Agregar Sistemas',
+        url: '/sistemas/add-systems',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Editar Sistemas',
+        url: '/sistemas/edit-systems',
+        icon: 'nav-icon-bullet'
+      },
+      
+    ]
+  },
+  {
+    name: 'Roles',
+    url: '/roles',
+    iconComponent: { name: 'cil-speedometer' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    },
+    children: [
+      {
+        name: 'Lista de Roles',
+        url: '/roles/list-roles',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Agregar Roles',
+        url: '/roles/add-roles',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Editar Roles',
+        url: '/roles/edit-roles',
+        icon: 'nav-icon-bullet'
+      },
+      
+    ]
+  },
+  {
+    name: 'Permisos',
+    url: '/permisos',
+    iconComponent: { name: 'cil-speedometer' },
+    badge: {
+      color: 'info',
+      text: 'NEW'
+    },
+    children: [
+      {
+        name: 'Lista de Permisos',
+        url: '/permisos/list-permissions',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Agregar Permisos',
+        url: '/permisos/add-permissions',
+        icon: 'nav-icon-bullet'
+      },
+      {
+        name: 'Editar Permisos',
+        url: '/permisos/edit-permissions',
+        icon: 'nav-icon-bullet'
+      },
+      
     ]
   },
   {
