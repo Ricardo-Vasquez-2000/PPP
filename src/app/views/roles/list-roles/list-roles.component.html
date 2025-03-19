@@ -1,1 +1,37 @@
-<p>list-roles works!</p>
+<div class="table-container">
+    <h3>Roles</h3>
+    <div class="btn-agregar">
+        <button cButton color="success" (click)="addRoles()">Agregar Rol</button>
+    </div>
+    
+  
+    <table cTable striped hover responsive>
+      <thead cTableColor="dark">
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let roles of roles let i = index">
+          <td>{{ roles.code }}</td>
+          <td>
+            <span *ngIf="!roles.editing">{{ roles.name }}</span>
+            <input cFormControl *ngIf="roles.editing" [(ngModel)]="roles.name" (blur)="saveRoles(roles)">
+          </td>
+          <td>
+            <button cButton color="warning" size="sm" (click)="editRoles(roles)" shape="rounded-pill">
+              ✏️
+            </button>
+          </td>
+          <td>
+            <button cButton color="danger" size="sm" (click)="deleteRoles(i)" shape="rounded-pill">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
