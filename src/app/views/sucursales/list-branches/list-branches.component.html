@@ -1,1 +1,38 @@
-<p>list-branches works!</p>
+<div class="table-container">
+    <h3>Sucursales</h3>
+    <div class="btn-agregar">
+        <button cButton color="success" (click)="addBranches()">Agregar Sucursal</button>
+    </div>
+    
+  
+    <table cTable striped hover responsive>
+      <thead cTableColor="dark">
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let branches of branches let i = index">
+          <td>{{ branches.code }}</td>
+          <td>
+            <span *ngIf="!branches.editing">{{ branches.name }}</span>
+            <input cFormControl *ngIf="branches.editing" [(ngModel)]="branches.name" (blur)="saveBranches(branches)">
+          </td>
+          <td>
+            <button cButton color="warning" size="sm" (click)="editBranches(branches)" shape="rounded-pill">
+              ✏️
+            </button>
+          </td>
+          <td>
+            <button cButton color="danger" size="sm" (click)="deleteBranches(i)" shape="rounded-pill">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

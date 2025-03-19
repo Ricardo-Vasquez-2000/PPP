@@ -1,1 +1,37 @@
-<p>list-permissions works!</p>
+<div class="table-container">
+    <h3>Permisos</h3>
+    <div class="btn-agregar">
+        <button cButton color="success" (click)="addPermissions()">Agregar Permiso</button>
+    </div>
+    
+  
+    <table cTable striped hover responsive>
+      <thead cTableColor="dark">
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let permissions of permissions let i = index">
+          <td>{{ permissions.code }}</td>
+          <td>
+            <span *ngIf="!permissions.editing">{{ permissions.name }}</span>
+            <input cFormControl *ngIf="permissions.editing" [(ngModel)]="permissions.name" (blur)="savePermissions(permissions)">
+          </td>
+          <td>
+            <button cButton color="warning" size="sm" (click)="editPermissions(permissions)" shape="rounded-pill">
+              ✏️
+            </button>
+          </td>
+          <td>
+            <button cButton color="danger" size="sm" (click)="deletePermissions(i)" shape="rounded-pill">
+              🗑️
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
